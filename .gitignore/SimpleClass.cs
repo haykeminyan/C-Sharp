@@ -1,13 +1,13 @@
 using System;
 class Building
 {
-    public int Floors;
     public int Area;
-    public int Occupants;
-
-public void AreaPerPerson(){
-    Console.WriteLine(Area/Occupants);
-}
+    public int Person;
+    
+    public int AreaPerPerson()
+    {
+        return Area/Person;
+    }
 }
 class BuildingDemo
 {
@@ -15,13 +15,14 @@ class BuildingDemo
     {
         Building house=new Building();
         Building office=new Building();
-        house.Occupants=10;
-        house.Area=1000;
-        house.Floors=31;
-        office.Occupants=10;
-        office.Area=21;
-        office.Floors=2;
-        house.AreaPerPerson();
-        office.AreaPerPerson();
+        int areaPP;
+        house.Area=123;
+        house.Person=12;
+        office.Person=1234;
+        office.Area=323124;
+        areaPP=house.AreaPerPerson();
+        Console.WriteLine(areaPP);
+        areaPP=office.AreaPerPerson();
+        Console.WriteLine(areaPP);
     }
 }
